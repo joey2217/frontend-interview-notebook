@@ -4,7 +4,7 @@ module.exports = {
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'JOey', // Usually your GitHub org/user name.
+  organizationName: 'Joey', // Usually your GitHub org/user name.
   projectName: 'frontend-interview-notebook', // Usually your repo name.
   themeConfig: {
     navbar: {
@@ -20,7 +20,7 @@ module.exports = {
         //   label: 'Docs',
         //   position: 'left',
         // },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        {to: 'blog', label: '面试题', position: 'right'},
         {
           href: 'https://github.com/BurNing1993/frontend-interview-notebook',
           label: 'GitHub',
@@ -61,7 +61,7 @@ module.exports = {
           title: 'Social',
           items: [
             {
-              label: 'Blog',
+              label: '面试题',
               to: 'blog',
             },
             // {
