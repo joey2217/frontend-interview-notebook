@@ -14,12 +14,12 @@ module.exports = {
         src: 'img/logo.svg',
       },
       links: [
-        // {
-        //   to: 'docs/doc1',
-        //   activeBasePath: 'docs',
-        //   label: 'Docs',
-        //   position: 'left',
-        // },
+        {
+          to: 'docs/js-built-in-types',
+          activeBasePath: 'docs',
+          label: '基础',
+          position: 'left',
+        },
         {to: 'blog', label: '面试题', position: 'right'},
         {
           href: 'https://github.com/BurNing1993/frontend-interview-notebook',
