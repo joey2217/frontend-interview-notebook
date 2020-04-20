@@ -52,7 +52,7 @@ typeof null === 'object';
 
 曾有一个 ECMAScript 的修复提案（通过选择性加入的方式），但被拒绝了。该提案会导致 typeof null === 'null'。
 
--- 使用 `new` 操作符
+- 使用 `new` 操作符
 
 ```js
 // 除 Function 外的所有构造函数的类型都是 'object'
@@ -85,6 +85,7 @@ Number.EPSILON 属性表示 1 与Number可表示的大于 1 的最小的浮点�
 
 你不必创建一个 Number 对象来访问这个静态属性（直接使用 Number.EPSILON）。
 
+```js
 function numbersCloseEnoughToEqual(n1,n2) {
     return Math.abs( n1 - n2 ) < Number.EPSILON;
 }
@@ -94,3 +95,4 @@ var b = 0.3;
 
 numbersCloseEnoughToEqual( a, b );                    // true
 numbersCloseEnoughToEqual( 0.0000001, 0.0000002 );    // false
+```
