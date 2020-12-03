@@ -1,5 +1,5 @@
 ---
-id: big-number-sum
+slug: big-number-sum
 title: 大数相加
 author: Joey
 author_title: Front End Engineer

@@ -1,5 +1,5 @@
 ---
-id: debounce-decorator
+slug: debounce-decorator
 title: Debounce装饰器
 author: Joey
 author_title: Front End Engineer

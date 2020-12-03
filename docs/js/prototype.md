@@ -1,5 +1,5 @@
 ---
-id: js-prototype
+id: prototype
 title: 原型和继承
 sidebar_label: 原型和继承
 ---

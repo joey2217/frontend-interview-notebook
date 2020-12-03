@@ -1,5 +1,5 @@
 ---
-id: value-comparison
+slug: value-comparison
 title: 如何令a == 1 && a == 2 && a == 3 返回true？
 author: Joey
 author_title: Front End Engineer

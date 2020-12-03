@@ -1,5 +1,5 @@
 ---
-id: base-computer-operating-system
+id: computer-operating-system
 title: 计算机操作系统
 sidebar_label: 计算机操作系统
 ---

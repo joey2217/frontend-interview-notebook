@@ -1,5 +1,5 @@
 ---
-id: high-order-combinedFetcher
+slug: high-order-combinedFetcher
 title: 实现高阶函数combinedFetcher
 author: Joey
 author_title: Front End Engineer

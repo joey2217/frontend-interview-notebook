@@ -1,5 +1,5 @@
 ---
-id: js-equality-comparisons-and-sameness
+id: equality-comparisons-and-sameness
 title: 相等性判断
 sidebar_label: 相等性判断
 ---

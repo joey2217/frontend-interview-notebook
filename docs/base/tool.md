@@ -1,5 +1,5 @@
 ---
-id: base-tool
+id: tool
 title: 工具
 sidebar_label: 工具
 ---

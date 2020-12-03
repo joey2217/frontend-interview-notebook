@@ -1,5 +1,5 @@
 ---
-id: js-built-in-types
+id: built-in-types
 title: 内置类型
 sidebar_label: 内置类型
 ---
@@ -14,7 +14,7 @@ sidebar_label: 内置类型
 字符串是不可变的，因此被认为有固定长度。
 :::
 
-![内置类型](../static/docs/buit-in-types.jpg "内置类型")
+![内置类型](../../static/docs/buit-in-types.jpg "内置类型")
 
 其实类型指的是值的类型，不是变量的类型，这是动态语言和静态语言的差异。 对于静态语言来说，我们可以限定一个变量的类型。但是对于 JS 这种动态类型的语言来说， 我们无法给变量限定类型，变量的类型是可变的。举个例子：
 
