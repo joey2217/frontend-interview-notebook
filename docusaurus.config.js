@@ -105,5 +105,29 @@ module.exports = {
         },
       },
     ],
+    [
+      '@docusaurus/plugin-pwa',
+      {
+        debug: true,
+        offlineModeActivationStrategies: ['appInstalled', 'queryString'],
+        pwaHead: [
+          {
+            tagName: 'link',
+            rel: 'icon',
+            href: '/img/android-chrome-192x192.png',
+          },
+          {
+            tagName: 'link',
+            rel: 'manifest',
+            href: '/manifest.json', // your PWA manifest
+          },
+          {
+            tagName: 'meta',
+            name: 'theme-color',
+            content: '#25c2a0',
+          },
+        ],
+      },
+    ],
   ],
 };
