@@ -14,7 +14,10 @@ module.exports = {
     'base/html', 'base/css', 'base/js', 'base/computer-operating-system', 'base/computer-network', 'base/puzzle', 'base/algorithm', 'base/interview-questions', 'base/tool'
   ],
   js: [
-    'js/built-in-types', 'js/equality-comparisons-and-sameness', 'js/prototype'
+    'js/built-in-types', 'js/equality-comparisons-and-sameness', 'js/prototype', 'js/proxy'
+  ],
+  interview2021: [
+    'interview2021/stack'
   ],
 };
 

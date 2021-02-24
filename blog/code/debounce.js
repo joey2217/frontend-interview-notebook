@@ -29,3 +29,5 @@ var debouncedLog = debounce(log, 1000);
 window.addEventListener('resize', function (e) {
   debouncedLog(e);
 });
+
+

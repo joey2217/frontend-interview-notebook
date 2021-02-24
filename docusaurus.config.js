@@ -33,6 +33,12 @@ module.exports = {
           label: '基础',
           position: 'left',
         },
+        {
+          to: '/docs/interview2021/stack',
+          activeBasePath: '/docs/interview2021',
+          label: 'interview2021',
+          position: 'left',
+        },
         { to: 'blog', label: '面试题', position: 'right' },
         {
           href: 'https://github.com/BurNing1993/frontend-interview-notebook',
