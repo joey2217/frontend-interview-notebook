@@ -1,3 +1,4 @@
+/** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: '前端面试手册',
   tagline: '前端基础知识,面试题...',
