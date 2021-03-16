@@ -17,7 +17,7 @@ module.exports = {
     'js/built-in-types', 'js/equality-comparisons-and-sameness', 'js/prototype', 'js/proxy'
   ],
   interview2021: [
-    'interview2021/stack'
+    'interview2021/stack','interview2021/proto','interview2021/variant','interview2021/event-loop',
   ],
 };
 
