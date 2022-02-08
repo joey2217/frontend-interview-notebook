@@ -2,6 +2,7 @@
 id: js
 title: JavaScript基础
 sidebar_label: JavaScript基础
+sidebar_position: 3
 ---
 
 ## 1. 介绍 js 的基本数据类型。

@@ -2,6 +2,7 @@
 id: html
 title: HTML基础
 sidebar_label: HTML基础
+sidebar_position: 1
 ---
 
 ## 1. DOCTYPE 的作用是什么
