@@ -40,7 +40,13 @@ module.exports = {
           label: 'interview2021',
           position: 'left',
         },
-        { to: 'blog', label: '面试题', position: 'right' },
+        {
+          to: '/docs/interview/base',
+          activeBasePath: '/docs/interview/base',
+          label: '面试题',
+          position: 'left',
+        },
+        { to: 'blog', label: 'blog', position: 'right' },
         {
           href: 'https://github.com/BurNing1993/frontend-interview-notebook',
           label: 'GitHub',
@@ -53,8 +59,7 @@ module.exports = {
       links: [
         {
           title: 'Docs',
-          items: [
-          ],
+          items: [],
         },
         {
           title: 'Community',
@@ -105,7 +110,6 @@ module.exports = {
           // Please change this to your repo.
           editUrl:
             'https://github.com/BurNing1993/frontend-interview-notebook/tree/master/blog/',
-
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -137,4 +141,5 @@ module.exports = {
       },
     ],
   ],
-};
+  themes: ['@docusaurus/theme-live-codeblock'],
+}

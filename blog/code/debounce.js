@@ -2,7 +2,7 @@
  * @param {Function} fn The function to debounce.n  
  * @param {Number} wait The number of milliseconds to delay.
  */
-function debounce(fn, wait) {
+ function debounce(fn, wait) {
   if (wait === void 0) { wait = 500; }
   var timer = null;
   return function () {

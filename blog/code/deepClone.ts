@@ -7,7 +7,7 @@ function deepClone(obj: object) {
   if (obj instanceof Date) {
     return new Date(obj);
   }
-  let clone = new obj.constructor;
+  let clone =  Object.create(obj.constructor)
   for (const key in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
       clone[key] = deepClone(obj[key]);
