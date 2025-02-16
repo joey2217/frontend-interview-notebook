@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # 面试题
 
-> <https://juejin.cn/post/6905294475539513352>
+> [高频前端面试题汇总之 HTML 篇](https://juejin.cn/post/6905294475539513352)
 
 ## JS 原型及原型链
 
@@ -38,16 +38,16 @@ String.constructor == Function //true
 
 ![原型链](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/635ea06a5b6c43b1996f6f7d66b26b86~tplv-k3u1fbpfcp-watermark.awebp)
 
-## JS继承的几种方式
+## JS 继承的几种方式
 
 1. 原型继承
 
 ```js
-function Parent () {
+function Parent() {
   this.name = 'Parent'
   this.sex = 'boy'
 }
-function Child () {
+function Child() {
   this.name = 'child'
 }
 // 将子类的原型对象指向父类的实例
@@ -62,10 +62,10 @@ Child.prototype = new Parent()
 > 在子类构造函数内部使用 **call** 或 **apply** 来调用父类构造函数，复制父类的实例属性给子类。
 
 ```js
-function Parent (name) {
+function Parent(name) {
   this.name = name
 }
-function Child () {
+function Child() {
   //用.call 来改变 Parent 构造函数内的指向
   Parent.call(this, 'child')
 }
@@ -85,7 +85,7 @@ function Child () {
 // 原型链继承
 Child.prototype = new Parent()
 // 构造继承
-function Child () {
+function Child() {
   Parent.call(this, ...arguments)
 }
 ```
@@ -104,15 +104,15 @@ Child.prototype = Object.create(Parent.prototype)
 
 ```js
 class Parent {
-  constructor (name) {
+  constructor(name) {
     this.name = name
   }
-  getName () {
+  getName() {
     console.log(this.name)
   }
 }
 class Child extends Parent {
-  constructor (name) {
+  constructor(name) {
     super(name)
     this.sex = 'boy'
   }
@@ -129,4 +129,4 @@ class Child extends Parent {
 同步（Promise）>异步（微任务（process.nextTick ，Promises.then, Promise.catch ，resove,reject,MutationObserver)>宏任务（setTimeout，setInterval，setImmediate））
 :::
 
-await阻塞 后面的代码执行，因此跳出async函数执行下一个微任务
+await 阻塞 后面的代码执行，因此跳出 async 函数执行下一个微任务

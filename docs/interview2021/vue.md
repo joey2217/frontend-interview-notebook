@@ -34,7 +34,7 @@ sidebar_label: vue
 
 6. 为何组件 data 必须是一个函数
 
-<https://cn.vuejs.org/v2/guide/components.html#data-%E5%BF%85%E9%A1%BB%E6%98%AF%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0>
+[官方文档](https://cn.vuejs.org/v2/guide/components.html#data-%E5%BF%85%E9%A1%BB%E6%98%AF%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0)
 
 7. Vue 常见性能优化方式
 

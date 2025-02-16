@@ -1,7 +1,7 @@
 ---
-id: computer-operating-system
 title: 计算机操作系统
 sidebar_label: 计算机操作系统
+description: 计算机操作系统
 ---
 
 ## 基础

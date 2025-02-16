@@ -1,0 +1,14 @@
+debounce:
+  label: debounce
+  permalink: /debounce
+  description: debounce tag description
+
+decorator:
+  label: decorator
+  permalink: /decorator
+  description: decorator tag description
+
+curry:
+  label: curry
+  permalink: /curry
+  description: curry tag description

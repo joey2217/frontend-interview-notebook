@@ -1,0 +1,9 @@
+joey:
+  name: Joey
+  title: Front End Engineer
+  url: https://github.com/joey2217
+  image_url: https://github.com/joey2217.png
+  page: true
+  description: Front End Engineer, JavaScript, React, Vue, Webpack, Node.js,
+  socials:
+    github: joey2217

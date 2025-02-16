@@ -42,7 +42,7 @@ JavaScript 提供三种不同的值比较操作：
 |       null        |     undefined     | true  | false |    false    |
 |       null        |       false       | false | false |    false    |
 |     undefined     |       false       | false | false |    false    |
-|  { foo: "bar" }   |  { foo: "bar" }   | false | false |    false    |
+| `{ foo: "bar" } ` | `{ foo: "bar" }`  | false | false |    false    |
 | new String("foo") | new String("foo") | false | false |    false    |
 |         0         |       null        | false | false |    false    |
 |         0         |        NaN        | false | false |    false    |

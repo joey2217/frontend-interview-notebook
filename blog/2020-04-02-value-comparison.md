@@ -1,11 +1,8 @@
 ---
 slug: value-comparison
 title: 如何令a == 1 && a == 2 && a == 3 返回true？
-author: Joey
-author_title: Front End Engineer
-author_url: https://github.com/BurNing1993
-author_image_url: https://ae01.alicdn.com/kf/H1f8d0d7a21eb49438e627de1708be6efE.jpg
-tags: [开放问题, 值比较]
+authors: 
+    - joey
 ---
 
 ## 问题描述
@@ -21,31 +18,30 @@ tags: [开放问题, 值比较]
 ### 方案一(使用`getter`存储器)
 
 ```js
-var temp = 1;
-Object.defineProperty(window, "a", {
-  get: function() {
+var temp = 1
+Object.defineProperty(window, 'a', {
+  get: function () {
     // 每次取值，temp+1
-    return this.temp++;
-  }
-});
-a == 1 && a == 2 && a == 3; // true
-a === 1 && a === 2 && a === 3; // true
+    return this.temp++
+  },
+})
+a == 1 && a == 2 && a == 3 // true
+a === 1 && a === 2 && a === 3 // true
 ```
 
 :::note 说明
-这个是使用`getter`存储器的方式，也就是以全局变量`temp`存储一个值，每次调用的时候都`++1`使得调用a每次都递增1
+这个是使用`getter`存储器的方式，也就是以全局变量`temp`存储一个值，每次调用的时候都`++1`使得调用 a 每次都递增 1
 :::
 
-### 方案二(重写valueOf() / toString())
+### 方案二(重写 valueOf() / toString())
 
 ```js
 var a = {
-    value: 1,
-    valueOf: function()  {
-        return this.value++;
-    }
-}
-(a == 1 && a == 2 && a == 3); // true
+  value: 1,
+  valueOf: function () {
+    return this.value++
+  },
+}(a == 1 && a == 2 && a == 3) // true
 ```
 
 :::tip
@@ -54,27 +50,27 @@ var a = {
 
 - 原因参考`==转换规则`
 
-1. 如果一个是null，一个是undefined，则它们相等
+1. 如果一个是 null，一个是 undefined，则它们相等
 2. 如果一个是数字，一个是字符串，先将字符串转换成数字，然后使用转换后的值进行比较
-3. 如果其中的一个值为true，则转换成1再进行比较；如果其中一个值为false，这转换成0再进行比较
-4. 如果一个值是对象，另一个值是数字或者字符串，则将对象转换成原始值再进行比较。转换成字符串时，会先调用toString()，如果没有toString()方法或者返回的不是一个原始值，则再调用valueOf()，如果还是不存在或者返回不是原始值，则会抛出一个类型错误的异常。返回的原始值会被转换成字符串；如果转换成数字时，也是类似的，不过是会先调用valueOf()，再调用toString()，返回的原始值会被转换成数字
+3. 如果其中的一个值为 true，则转换成 1 再进行比较；如果其中一个值为 false，这转换成 0 再进行比较
+4. 如果一个值是对象，另一个值是数字或者字符串，则将对象转换成原始值再进行比较。转换成字符串时，会先调用 toString()，如果没有 toString()方法或者返回的不是一个原始值，则再调用 valueOf()，如果还是不存在或者返回不是原始值，则会抛出一个类型错误的异常。返回的原始值会被转换成字符串；如果转换成数字时，也是类似的，不过是会先调用 valueOf()，再调用 toString()，返回的原始值会被转换成数字
 5. 其他不同类型之间的比较均不相等
-:::
+   :::
 
 :::note 说明
 所以在这里使用`a`与这些字符进行比较时会被转换成数字，此时会默认调用字符串的`valueOf()`方法，我们将这个方法进行重写，用于拦截处理`a`的值
 :::
 
-- 同理可以使用toString方法处理，因为字符串转数字类型时会涉及到valueOf()和toString()，道理一样
+- 同理可以使用 toString 方法处理，因为字符串转数字类型时会涉及到 valueOf()和 toString()，道理一样
 
 ```js
 let a = {
-    value: 1,
-    toString: function () {
-        return a.value++;    // 这里为什么不用this而已a？因为this作用域可变
-    }
+  value: 1,
+  toString: function () {
+    return a.value++ // 这里为什么不用this而已a？因为this作用域可变
+  },
 }
-console.log(a == 1 && a == 2 && a == 3);    // true
+console.log(a == 1 && a == 2 && a == 3) // true
 ```
 
 :::note
@@ -84,41 +80,45 @@ console.log(a == 1 && a == 2 && a == 3);    // true
 ### 方案三(ES6 Proxy)
 
 ```js
-var a = new Proxy({ i: 0 }, {
-    get: (target, name) => name === Symbol.toPrimitive ? () => ++target.i : target[name],
-});
-console.log(a == 1 && a == 2 && a == 3);    // true
+var a = new Proxy(
+  { i: 0 },
+  {
+    get: (target, name) =>
+      name === Symbol.toPrimitive ? () => ++target.i : target[name],
+  }
+)
+console.log(a == 1 && a == 2 && a == 3) // true
 ```
 
 ### 方案四(数字变量名)
 
 ```js
-var  a = 1;
-var ﾠ1 = a;
-var ﾠ2 = a;
-var ﾠ3 = a;
-console.log( a ==ﾠ1 && a ==ﾠ2 && a ==ﾠ3 );
+var a = 1
+var ﾠ1 = a
+var ﾠ2 = a
+var ﾠ3 = a
+console.log(a == ﾠ1 && a == ﾠ2 && a == ﾠ3)
 ```
 
 ### 方案五(`join` + `shift`)
 
-- 对于对象数组进行比较时，这里数组a每次比较的时候都会默认调用toString()，然后toString()又会默认调用join()，这里将join()改为shift()，意思是删除第一个数组元素值并返回
+- 对于对象数组进行比较时，这里数组 a 每次比较的时候都会默认调用 toString()，然后 toString()又会默认调用 join()，这里将 join()改为 shift()，意思是删除第一个数组元素值并返回
 
-- 所以这样调用每次都会导致a数组删除第一个值并且返回删除掉的那个值，结合这样的规律，每次比较都取出对应位置的值
+- 所以这样调用每次都会导致 a 数组删除第一个值并且返回删除掉的那个值，结合这样的规律，每次比较都取出对应位置的值
 
-- 这里是1、2、3，只要符合规律返回的值就行
+- 这里是 1、2、3，只要符合规律返回的值就行
 
 ```js
-var a =[1,2,3];
-a.join = a.shift;
-console.log(a);                // (3) [1, 2, 3, join: ƒ]
+var a = [1, 2, 3]
+a.join = a.shift
+console.log(a) // (3) [1, 2, 3, join: ƒ]
 // console.log( a ==ﾠ1 && a ==ﾠ2 && a ==ﾠ3 );    // true
-console.log(a == 1);        // true
-console.log(a);                // (2) [2, 3, join: ƒ]
-console.log(a == 2);        // true
-console.log(a);                // [3, join: ƒ]
-console.log(a == 3);        // true
-console.log(a);                // [join: ƒ]
+console.log(a == 1) // true
+console.log(a) // (2) [2, 3, join: ƒ]
+console.log(a == 2) // true
+console.log(a) // [3, join: ƒ]
+console.log(a == 3) // true
+console.log(a) // [join: ƒ]
 ```
 
 ## 扩展

@@ -1,3 +1,9 @@
+---
+title:  HTML
+sidebar_label: HTML
+description: HTML
+---
+
 ## HTML && CSS
 
 ### HTML5 新特性、语义化
@@ -92,7 +98,7 @@
 
 ### 常见的兼容性问题
 
-1. 不同浏览器的标签默认的margin和padding不一样。*{margin:0;padding:0;}
+1. 不同浏览器的标签默认的margin和padding不一样。`*{margin:0;padding:0;}`
 
 2. IE6双边距bug：块属性标签float后，又有横行的margin情况下，在IE6显示margin比设置的大。hack：display:inline;将其转化为行内属性。
 
@@ -100,7 +106,7 @@
 
 4. Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px 显示,可通过加入 CSS 属性 -webkit-text-size-adjust: none; 解决。
 
-5. 超链接访问过后hover样式就不出现了，被点击访问过的超链接样式不再具有hover和active了。解决方法是改变CSS属性的排列顺序:L-V-H-A ( love hate ): a:link {} a:visited {} a:hover {} a:active {}
+5. 超链接访问过后hover样式就不出现了，被点击访问过的超链接样式不再具有hover和active了。解决方法是改变CSS属性的排列顺序:L-V-H-A ( love hate ): `a:link {} a:visited {} a:hover {} a:active {}`
 
 
 ### CSS3新特性
@@ -273,7 +279,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局",用来为盒状模型提�
 
 -   flex-direction：决定主轴的方向（即子 item 的排列方法）flex-direction: row | row-reverse | column | column-reverse;
 -   flex-wrap：决定换行规则 flex-wrap: nowrap | wrap | wrap-reverse;
--   flex-flow： .box { flex-flow: || ; }
+-   flex-flow： `.box { flex-flow: || ; }`
 -   justify-content：对其方式，水平主轴对齐方式
 -   align-items：对齐方式，竖直轴线方向
 -   align-content

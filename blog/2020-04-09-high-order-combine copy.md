@@ -1,11 +1,8 @@
 ---
 slug: high-order-combinedFetcher
 title: 实现高阶函数combinedFetcher
-author: Joey
-author_title: Front End Engineer
-author_url: https://github.com/BurNing1993
-author_image_url: https://ae01.alicdn.com/kf/H1f8d0d7a21eb49438e627de1708be6efE.jpg
-tags: [编程题]
+authors:
+  - joey
 ---
 
 ## 问题描述

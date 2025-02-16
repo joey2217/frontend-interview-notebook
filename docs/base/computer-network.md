@@ -1,7 +1,7 @@
 ---
-id: computer-network
 title: 计算机网络
 sidebar_label: 计算机网络
+description: 计算机网络
 ---
  
 
