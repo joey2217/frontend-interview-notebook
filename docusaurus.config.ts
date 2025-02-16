@@ -40,7 +40,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/joey2217/frontend-interview-notebook/edit/main/',
+            'https://github.com/joey2217/frontend-interview-notebook/edit/master/',
         },
         blog: {
           showReadingTime: true,
@@ -51,7 +51,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/joey2217/frontend-interview-notebook/edit/main/',
+            'https://github.com/joey2217/frontend-interview-notebook/edit/master/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -95,8 +95,8 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: '文档',
+              to: '/docs/base/js',
             },
           ],
         },
